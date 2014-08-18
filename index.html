@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function writeCookie()
+		{
+			if(document.myform.customer.value ==""){
+			alert("Enter Some Value");
+			return;
+			}
+		
+		var now = new Date();
+		now.setMonth(now.getMonth()+1);
+		cookieValue=escape(document.myform.customer.value) + ";";
+		document.cookie = "name=" + cookieValue;
+		document.cookie="Expire =" + now.toUTCString()+";";
+		alert("Seting Cookies: "+"name="+cookieValue);
+		}
+		function goTo(){
+			window.location="http://localhost/setCookie/readCookie.html";
+			}	
+	
+</script>
+</head>
+<body>
+<form name="myform" action="">
+Enter name:<input type="text" name="customer"/>
+<input type="button" value="Set Cookie" onclick="writeCookie();"/>
+<input type = "button" value="goto Read" onclick="goTo();">
+</form>
+</body>
+</html>
