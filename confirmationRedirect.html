@@ -10,11 +10,18 @@
 			window.location="http://www.smartek21.com";
 		}
 		
+		function textInPrompt(){
+			var name = prompt("Enter you name","First Name");
+			document.getElementById("inputName").innerHTML = "Welcome "+ name;
+		}
+		
 	</script>
 </head>
 <body>
 	<p>Click the following button to get redirected to Smartek21.com</p>
 	<form>
 		<input type = "button" value="Smartek" onclick="getConfirmation();">
+		<input type = "button" value = "Click to enter" onclick="textInPrompt();">
+		<p id = "inputName"></p>
 	</form>	
 </body>
