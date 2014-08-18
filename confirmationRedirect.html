@@ -1,0 +1,20 @@
+<html>
+<head>
+	<script type = "text/javascript">
+		function getConfirmation(){
+			var retrnValue = confirm("Are you sure you wana leave this page??");
+			if(retrnValue==true)
+				redirectToSmarTek();
+			}
+		function redirectToSmarTek(){
+			window.location="http://www.smartek21.com";
+		}
+		
+	</script>
+</head>
+<body>
+	<p>Click the following button to get redirected to Smartek21.com</p>
+	<form>
+		<input type = "button" value="Smartek" onclick="getConfirmation();">
+	</form>	
+</body>
